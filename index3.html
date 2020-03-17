@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h2>Get Academy Puzzle</h2>
+        <p>Created by Naomi, krzysztof and Jamie</p>
+        <div id="picture1" onclick="addPicture('picture1')" style="float: left">
+            <img src="picture1.jpg" style="width: 200px" />
+        </div>
+        <div id="picture2" onclick="addPicture('picture2')">
+            <img src="picture2.jpg" style="width: 200px" />
+        </div>
+
+        <div id="container"></div>
+
+        <script>
+            function addPicture(picture) {
+                if (picture == "picture1") {
+                    document.getElementById("container").innerHTML +=
+                        "<img src='picture1.jpg' style='width:300px; display: block'/>";
+                        document.getElementById('picture1').removeAttribute("onclick");
+                } else {
+                    document.getElementById("container").innerHTML +=
+                        "<img src='picture2.jpg' style='width:300px; display: block'/>";
+                        document.getElementById('picture2').removeAttribute("onclick");
+                }
+                           }
+        </script>
+    </body>
+</html>
